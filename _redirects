@@ -1,0 +1,6 @@
+/api/chat       /.netlify/functions/chat   200
+/dashboard      /dashboard.html            200
+/dashboard/*    /dashboard.html            200
+/login          /login.html                200
+/netlify/*      /404.html                  404!
+/README.md      /404.html                  404!

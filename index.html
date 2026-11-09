@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PulseSync AI — Emergency Response, Connected</title>
+  <meta name="description" content="AI-driven emergency triage, smart ambulance dispatch and live ER handover. One tap for help, family alerts and your medical card.">
+  <meta name="theme-color" content="#050c14">
+  <meta property="og:title" content="PulseSync AI — Emergency Response, Connected">
+  <meta property="og:description" content="AI-driven emergency triage, smart ambulance dispatch and live ER handover. One tap for help, family alerts and your medical card.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/landing.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="/" class="brand" aria-label="PulseSync AI home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h4l2.5-6 4 12 2.5-6H22"/></svg>
+      PulseSync<b>&nbsp;AI</b>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#trust">Safety</a>
+      <a href="#team">Team</a>
+    </nav>
+    <a href="/dashboard" class="btn btn-red btn-sm">Open dashboard
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+    </a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <p class="eyebrow">Medical AI</p>
+      <h1>Every second<br><span class="accent">in sync.</span></h1>
+      <p class="lede">PulseSync AI is an AI-driven emergency triage and real-time hospital route dispatcher. One tap connects the patient, the ambulance, the hospital and the family.</p>
+      <div class="hero-cta">
+        <a href="/dashboard" class="btn btn-red btn-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg>
+          Try the live demo
+        </a>
+        <a href="#how" class="btn btn-ghost btn-lg">See how it works</a>
+      </div>
+      <dl class="stats">
+        <div><dt>40%</dt><dd>faster dispatch*</dd></div>
+        <div><dt>1–5</dt><dd>AI severity levels</dd></div>
+        <div><dt>1 tap</dt><dd>family + ER alert</dd></div>
+      </dl>
+      <p class="fine">*Prototype target</p>
+    </div>
+
+    <aside class="live" aria-label="Example of a live response">
+      <div class="live-head"><span class="dot"></span><b>Live response</b><span class="timer" id="liveTimer">T+02:45</span></div>
+      <ol class="track" id="track">
+        <li class="on">SOS</li><li class="on">AI</li><li class="on">AMB</li><li>ER</li>
+      </ol>
+      <div class="sev">
+        <div class="sev-n">1</div>
+        <div><b>Level 1 · Critical</b><span>Suspected heart attack</span></div>
+      </div>
+      <div class="vitals">
+        <div><small>Heart rate</small><strong class="hr"><span id="hr">112</span><em>bpm</em></strong></div>
+        <div><small>SpO₂</small><strong>93<em>%</em></strong></div>
+      </div>
+      <svg class="ecg" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 34h70l10-4 10 4h30l10-26 14 50 12-24h24l8-6 8 6h60l10-26 14 50 12-24h108" /></svg>
+      <div class="hosp">
+        <div class="hosp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M12 9v6M9 12h6"/></svg></div>
+        <div><b>Lifeline Heart Institute</b><span>Cardiac ICU free · ETA 4:12</span></div>
+        <em>Pre-alerted</em>
+      </div>
+    </aside>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="sec wrap" id="how">
+    <p class="eyebrow">From alert to coordinated care</p>
+    <h2>Right patient. Right ambulance. Right hospital. Right time.</h2>
+    <ol class="steps">
+      <li><span class="step-n">01</span><span class="badge b-red">SOS</span><h3>SOS trigger</h3><p>One tap or voice</p></li>
+      <li><span class="step-n">02</span><span class="badge b-white">AI</span><h3>AI triage</h3><p>Severity Level 1–5</p></li>
+      <li><span class="step-n">03</span><span class="badge b-blue">AMB</span><h3>Smart dispatch</h3><p>ALS / BLS + ICU aware</p></li>
+      <li><span class="step-n">04</span><span class="badge b-cyan">GPS</span><h3>Live route</h3><p>Green-corridor path</p></li>
+      <li><span class="step-n">05</span><span class="badge b-red">ER</span><h3>ER handover</h3><p>Vitals before arrival</p></li>
+    </ol>
+    <div class="trio">
+      <article><h3>Voice symptom analysis</h3><p>Speak in plain words. AI turns them into a severity score.</p></article>
+      <article><h3>Live IoT vitals</h3><p>Pulse oximeter and ECG readings stream to the ER.</p></article>
+      <article><h3>Low-connectivity mode</h3><p>If data is weak, the basic SOS and coordinates go by SMS.</p></article>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="sec wrap" id="features">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">One dashboard</p>
+        <h2>Everything your family needs in an emergency.</h2>
+      </div>
+      <a href="/dashboard" class="btn btn-ghost">Open dashboard</a>
+    </div>
+    <div class="grid" id="featureGrid"></div>
+  </section>
+
+  <!-- SAFETY -->
+  <section class="sec wrap trust" id="trust">
+    <div>
+      <p class="eyebrow">Built for safety</p>
+      <h2>AI assists. Humans decide.</h2>
+      <p class="lede sm">PulseSync helps coordinate care. A qualified doctor still confirms every critical medical decision. Your medical card stays on your phone and is only shared when you tap send.</p>
+      <div class="tags">
+        <div><small>Clinical</small><b>Less delay in the Golden Hour</b></div>
+        <div><small>Social</small><b>Better access in rural areas</b></div>
+        <div><small>Economic</small><b>Better use of beds and ambulances</b></div>
+        <div><small>Environmental</small><b>Optimised routes cut fuel use and emissions</b></div>
+      </div>
+    </div>
+    <div class="risk" role="table" aria-label="Risks and how we handle them">
+      <div class="risk-h" role="row"><span role="columnheader">Risk</span><span role="columnheader">How we handle it</span></div>
+      <div role="row"><b role="cell">Poor internet</b><span role="cell">SMS fallback sends basic SOS info</span></div>
+      <div role="row"><b role="cell">Wrong AI diagnosis</b><span role="cell">A doctor checks it (human in the loop)</span></div>
+      <div role="row"><b role="cell">Wrong dispatch</b><span role="cell">Rule-based safety checks + doctor confirmation</span></div>
+      <div role="row"><b role="cell">Unreliable data</b><span role="cell">Continuous validation and monitoring</span></div>
+      <div role="row"><b role="cell">Accidental SOS</b><span role="cell">Reason box + 5-second cancel countdown</span></div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="sec wrap" id="team">
+    <p class="eyebrow">Team</p>
+    <h2>Neurobot</h2>
+    <p class="muted evt">MANTHAN 2026 · T. S. Mishra University · Healthcare &amp; Emergency Response (AI + IoT)</p>
+    <ul class="team">
+      <li><span class="av">ZA</span><div><b>Zulfaqar Alam</b><small>Team Leader · Website Developer</small></div></li>
+      <li><span class="av">MT</span><div><b>MohammadAli Tharadwala</b><small>Innovation &amp; Design Lead</small></div></li>
+      <li><span class="av">TP</span><div><b>Tanya Pandey</b><small>Lead Representative</small></div></li>
+      <li><span class="av">NH</span><div><b>Nadim Hasan Siddiqui</b><small>Revenue Planner</small></div></li>
+      <li><span class="av">MK</span><div><b>Mohit Kumar Rao</b><small>Project Management</small></div></li>
+    </ul>
+    <div class="cta">
+      <p>See the prototype in action: SOS, AI triage, live dispatch and ER handover.</p>
+      <a href="/dashboard" class="btn btn-red">Launch PulseSync
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot wrap">
+  <span>Team Neurobot · PulseSync AI</span>
+  <span>Prototype for demonstration. In a real emergency, call 108 or 112.</span>
+</footer>
+
+<script src="/js/landing.js" type="module"></script>
+</body>
+</html>

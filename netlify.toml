@@ -1,0 +1,19 @@
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+
+# Keep the service worker and pages fresh; assets get a short cache.
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # Geolocation, microphone (voice SOS) and notifications are needed by the app.
+    Permissions-Policy = "geolocation=(self), microphone=(self)"

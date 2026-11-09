@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dashboard — PulseSync AI</title>
+  <meta name="theme-color" content="#050c14">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body class="app-body">
+
+<div class="boot" id="boot" role="status">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h4l2.5-6 4 12 2.5-6H22"/></svg>
+  <span>Checking your sign-in…</span>
+</div>
+
+<div class="app" id="app" hidden>
+  <aside class="side" aria-label="Main">
+    <a href="/" class="brand" aria-label="PulseSync AI home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h4l2.5-6 4 12 2.5-6H22"/></svg>
+      PulseSync<b>&nbsp;AI</b>
+    </a>
+    <nav class="side-nav" id="sideNav" aria-label="Dashboard sections"></nav>
+    <div class="side-foot">
+      <div class="who">
+        <small>On this device</small>
+        <p>Signed in as <b id="whoName"></b></p>
+        <button type="button" class="logout" id="logoutBtn"></button>
+      </div>
+      <a class="btn btn-red btn-block" href="tel:108" id="call108"></a>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="top">
+      <p class="tagline" aria-label="Right patient, right ambulance, right hospital, right time"><span>Right patient</span><span>right ambulance</span><span>right hospital</span><b>right time</b></p>
+      <div class="pills">
+        <button type="button" class="pill-s" id="gpsPill" title="Turn on GPS"><i></i><span>GPS off</span></button>
+        <span class="pill-s net" id="netPill"><i></i><span>Network · 5 hospitals live</span></span>
+        <a class="btn btn-red btn-sm top-108" href="tel:108" id="top108"></a>
+      </div>
+    </header>
+
+    <div class="audio-bar" id="audioBar" hidden>
+      <span id="audioMsg">Tap once to turn on alarm sound, so SOS and medicine alarms can ring.</span>
+      <button type="button" class="btn btn-sm btn-blue" id="audioBtn">Turn on sound</button>
+    </div>
+
+    <main id="view" tabindex="-1"></main>
+  </div>
+
+  <nav class="tabbar" id="tabBar" aria-label="Dashboard sections (mobile)"></nav>
+</div>
+
+<!-- Static copy of the feedback form so Netlify Forms can detect it at deploy time. The live form is built by js/pages-feedback.js. -->
+<form name="feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="feedback">
+  <input name="bot-field">
+  <input name="features"><input name="name"><input name="email"><input name="role"><textarea name="message"></textarea>
+</form>
+
+<script type="module" src="/js/app.js"></script>
+</body>
+</html>
